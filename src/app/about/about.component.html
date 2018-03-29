@@ -1,6 +1,6 @@
 <div class="container" fxLayout="column" fxLayoutGap="10px">
 
-    <div fxFlex>
+    <div fxFlex *ngIf="leaders">
            <div>
               <h3>About Us</h3>
               <hr>
@@ -61,4 +61,7 @@
               </md-list>
             
           </div>
+</div>
+<div [hidden]="leaders">
+  <md-spinner> </md-spinner> <h4> Loading . . . Please Wait </h4>
 </div>
