@@ -48,8 +48,10 @@
         </p>
       </md-card-content>
     </md-card>
-    <div [hidden]="leader">
-      <md-spinner></md-spinner><h4>Loading . . . Please Wait</h4>
-    </div>
-  
-  </div>
+    <div [hidden]="dishes || dishErrMess">
+        <md-spinner></md-spinner><h4>Loading . . . Please Wait</h4>
+      </div>
+      <div *ngIf="dishErrMess">
+        <h2>Error</h2>
+        <h4>{{errMess}}</h4>
+      </div>
