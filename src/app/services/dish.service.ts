@@ -11,7 +11,7 @@ import { RestangularModule, Restangular } from 'ngx-restangular';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/map';
+
  
 
 import 'rxjs/add/operator/delay';
