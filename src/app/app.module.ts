@@ -12,7 +12,9 @@ import { baseURL } from './shared/baseurl';
 import { ProcessHttpmsgService } from './services/process-httpmsg.service';
 import { RestangularModule, Restangular } from 'ngx-restangular';
 import { RestangularConfigFactory } from './shared/restConfig';
+import { FeedbackService } from './services/feedback.service';
 
+import 'timers';
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
@@ -53,7 +55,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     HttpModule,
     RestangularModule.forRoot(RestangularConfigFactory)
   ],
-  providers: [DishService, PromotionService, LeaderService, {provide: 'BaseURL', useValue: baseURL} , 
+  providers: [DishService, PromotionService, LeaderService, FeedbackService, {provide: 'BaseURL', useValue: baseURL} , 
   ProcessHttpmsgService ],
   entryComponents: [
     LoginComponent
